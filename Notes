@@ -19,6 +19,9 @@ Assert --Check whether our expectations met.
 Fact Attribute([Fact])
   -->Attribute that is applied to a method to indicate that it is a fact that should be run by the test runner.
 
+Trait Attribute([trait])
+  -->Attribute is used to categorize or tag test with additional metadata
+
 Comand to create Xunit --- dotnet new Xunit
 command to create Api --- dotnet new webapi --use-Controllers
 command to create Solution file --- dotnet new sln

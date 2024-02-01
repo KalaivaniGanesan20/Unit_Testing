@@ -32,6 +32,8 @@ public class UnitTest1
     }
 
     [Fact]
+    [Trait("Category","weathercontroller")]
+    [Trait("Priority","High")]
     public void Test1()
     {
        //Arrange
@@ -47,6 +49,8 @@ public class UnitTest1
     }
 
     [Fact]
+    [Trait("Category","usercontroller")]
+    [Trait("Priority","Medium")]
     
     public void PostTest()
     {
@@ -67,9 +71,11 @@ public class UnitTest1
     }
 
     [Theory]
-    //[InlineData(10)]
-    //[InlineData(30)]
+    [InlineData(10)]
+    [InlineData(30)]
     [InlineData(100)]
+     [Trait("Category","calculate")]
+    [Trait("Priority","low")]
     public void TestCalculateMethod(int value)
     {
         var response=_user.Calculate(value);
@@ -81,6 +87,8 @@ public class UnitTest1
     }
 
     [Fact]
+     [Trait("Category","usercontroller")]
+    [Trait("Priority","low")]
     public void DeleteTest()
     {
         //Arrange
