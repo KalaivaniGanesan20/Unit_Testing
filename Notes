@@ -1,0 +1,35 @@
+Packages Needed:
+   --> Microsoft.EntityFrameworkCore
+   --> Microsoft.EntityFrameworkCore.SqlServer
+   --> Microsoft.EntityFrameworkCore.Design
+   --> Microsoft.EntityFrameworkCore.Tools
+
+Auto generated packages
+
+   --> Microsoft.NET.Test.Sdk
+   --> xunit
+   
+XUNIT TESTING
+
+AAA Concept
+Arrange -- object creations , mockdata setup
+Act --invoke the methods to be tested
+Assert --Check whether our expectations met.
+
+Fact Attribute([Fact])
+  -->Attribute that is applied to a method to indicate that it is a fact that should be run by the test runner.
+
+Comand to create Xunit --- dotnet new Xunit
+command to create Api --- dotnet new webapi --use-Controllers
+command to create Solution file --- dotnet new sln
+
+Add reference of Api and xunit test with sln file
+
+dotnet sln add Api/Api.csproj --- adds Api folder to sln file
+dotnet sln add test/test.csproj -- adds test folder to sln file
+
+dotnet add test/test.csproj reference Api/Api.csproj
+
+if we add the reference to both the folder it reflects in circular dependency exceptions
+
+   Example added reference of api folder to test and again adding  reference of test folder to api folder.
